@@ -1,9 +1,11 @@
 import tpl from './index.tpl'
 import './index.scss'
 
-export class Logo {
+class Logo {
   constructor () {
     this.name = 'logo'
     this.tpl = tpl
   }
 }
+
+export { Logo }

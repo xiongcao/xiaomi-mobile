@@ -6,7 +6,7 @@ class App {
     this.$app = $('<div id="app">');
     this.swiper = options.swiper;
     this.phone = options.phone;
-    this.fidle = options.field;
+    this.field = options.field;
     this.cache = null;
 
     this.init();
