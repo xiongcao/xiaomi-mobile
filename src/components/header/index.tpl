@@ -1,5 +1,5 @@
 <header class="header conver">
   <div class="container">
-    {{logo}}{{nav}}
+    {{logo}}{{nav}}{{search}}
   </div>
 </header>
