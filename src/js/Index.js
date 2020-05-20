@@ -1,7 +1,7 @@
 import { App } from './App';
 import { Header } from '../components/header';
 class Index extends App {
-  constructor ($) {
+  constructor () {
     super({
       swiper: true,
       phone: true,

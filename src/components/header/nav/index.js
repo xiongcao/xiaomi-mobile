@@ -4,8 +4,6 @@ import './index.scss';
 
 import { NavMenu } from './nav_menu';
 
-import tools from '../../../utils/tools';
-
 class Nav {
   constructor () {
     this.name = 'heanderNav';
@@ -16,12 +14,12 @@ class Nav {
   tpl (data) {
     let list = "";
     data.forEach((item) => {
-      list += tools.tplReplace(navItemTpl(), {
+      list += navItemTpl({
         field: item.field,
         seriesName: item.series_name
       })
     })
-    return tools.tplReplace(navTpl(), {
+    return navTpl({
       navItems: list,
       navMenu: this.navMenu.tpl()
     })

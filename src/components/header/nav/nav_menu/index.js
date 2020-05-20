@@ -2,7 +2,6 @@ import navMenuTpl from './tpl/nav_menu.tpl';
 import navMenuItemTpl from './tpl/nav_menu_item.tpl';
 import './index.scss';
 
-import tools from '../../../../utils/tools';
 
 class NavMenu {
   constructor () {
@@ -13,7 +12,7 @@ class NavMenu {
     let list = '';
     data.forEach((item, idx) => {
     	if (idx < 7) {
-    		list += tools.tplReplace(navMenuItemTpl(), {
+        list += navMenuItemTpl({
           id: item.id,
 	        pic: $.parseJSON(item.pics)[0][0][0],
 	        phone_name: item.phone_name,

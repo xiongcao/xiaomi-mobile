@@ -1,11 +1,10 @@
 import tpl from './index.tpl';
 import './index.scss';
 
+
 import { Logo } from './logo';
 import { Nav } from './nav'
 import { Search } from './search'
-
-import tools from '../../utils/tools';
 
 class Header {
   constructor (el, fieldDatas, phoneDatas) {
@@ -24,7 +23,7 @@ class Header {
   }
 
   async render () {
-    await this.$el.append(tools.tplReplace(tpl(), {
+    await this.$el.append(tpl({
       logo: this.logo.tpl(),
       nav: this.nav.tpl(this.fieldDatas),
       search: this.search.tpl()
