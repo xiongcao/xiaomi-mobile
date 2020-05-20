@@ -3,7 +3,7 @@ import navMenuItemTpl from './tpl/nav_menu_item.tpl';
 import './index.scss';
 
 
-class NavMenu {
+export default class NavMenu {
   constructor () {
     this.name = 'navMenu';
     this.tpl = navMenuTpl;

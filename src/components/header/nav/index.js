@@ -2,9 +2,9 @@ import navTpl from './tpl/nav.tpl';
 import navItemTpl from './tpl/nav_item.tpl';
 import './index.scss';
 
-import { NavMenu } from './nav_menu';
+import NavMenu from './nav_menu';
 
-class Nav {
+export default class Nav {
   constructor () {
     this.name = 'heanderNav';
     this.navMenu = new NavMenu();
@@ -42,5 +42,3 @@ class Nav {
   }
 
 }
-
-export { Nav }

@@ -1,12 +1,10 @@
 import tpl from './index.tpl';
 import './index.scss';
+import Logo from './logo';
+import Nav from './nav'
+import Search from './search'
 
-
-import { Logo } from './logo';
-import { Nav } from './nav'
-import { Search } from './search'
-
-class Header {
+export default class Header {
   constructor (el, fieldDatas, phoneDatas) {
     this.name = 'header';
     this.$el = el;
@@ -41,5 +39,3 @@ class Header {
     }, this.nav.navMenuMouseIn)
   }
 }
-
-export { Header }

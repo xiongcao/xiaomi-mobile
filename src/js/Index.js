@@ -1,5 +1,6 @@
 import { App } from './App';
-import { Header } from '../components/header';
+import Header from '../components/header';
+import carousel from '../components/carousel';
 class Index extends App {
   constructor () {
     super({
@@ -11,7 +12,7 @@ class Index extends App {
 
   render () {
     new Header(this.$app, this.cache.fieldDatas, this.cache.phoneDatas).init();
-
+    new carousel(this.$app, this.cache.swiperDatas).init();
     $('body').prepend(this.$app);
   }
 }
