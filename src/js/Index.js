@@ -17,11 +17,11 @@ class Index extends App {
     new Header(this.$app, this.cache.fieldDatas, this.cache.phoneDatas).init();
     new Carousel(this.$app, this.cache.swiperDatas).init();
     new BoardTitle(this.$app, '手机上新');
-    new ShowBoard(this.$app, this.handlePhonedatas('new'))
+    new ShowBoard(this.$app, this.handlePhonedatas('new')).init()
     new BoardTitle(this.$app, '超值手机');
-    new ShowBoard(this.$app, this.handlePhonedatas('most_value'))
+    new ShowBoard(this.$app, this.handlePhonedatas('most_value')).init()
     new BoardTitle(this.$app, '官方推荐');
-    new ShowBoard(this.$app, this.handlePhonedatas('recom'))
+    new ShowBoard(this.$app, this.handlePhonedatas('recom')).init()
     new Footer(this.$app)
     $('body').prepend(this.$app);
   }

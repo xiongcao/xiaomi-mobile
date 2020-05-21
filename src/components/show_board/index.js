@@ -8,20 +8,21 @@ export default class ShowBoard {
     this.name = 'show_board'
     this.$el = el;
     this.phoneDatas = phoneDatas
+  }
 
+  init () {
     this.render()
   }
 
   render() {
     this.$el.append(boardTpl({
-      list: this.handleItmeTpl() || new NoDataTip().tpl('未搜索到相关数据')
+      list: this.handleItmeTpl(this.phoneDatas) || new NoDataTip().tpl('未搜索到相关数据')
     }))
   }
 
-  handleItmeTpl () {
+  handleItmeTpl (datas) {
     let list = ''
-    this.phoneDatas.forEach((item, i) => {
-      console.log(item.slogan.split('，'))
+    datas.forEach((item, i) => {
       list += itemTpl({
         id: item.id,
         isFirst: i % 5 === 0 ? 'first' : '',
