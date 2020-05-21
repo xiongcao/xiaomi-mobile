@@ -3,6 +3,7 @@ import Header from '../components/header';
 import Carousel from '../components/carousel';
 import BoardTitle from '../components/board_title'
 import ShowBoard from '../components/show_board'
+import Footer from '../components/footer'
 class Index extends App {
   constructor () {
     super({
@@ -21,6 +22,7 @@ class Index extends App {
     new ShowBoard(this.$app, this.handlePhonedatas('most_value'))
     new BoardTitle(this.$app, '官方推荐');
     new ShowBoard(this.$app, this.handlePhonedatas('recom'))
+    new Footer(this.$app)
     $('body').prepend(this.$app);
   }
 
