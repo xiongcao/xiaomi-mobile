@@ -35,7 +35,7 @@ export default class Carousel {
   }
 
   autoPlay () {
-    this.timer = setInterval(this.run.bind(this, 'next'), 1500)
+    this.timer = setInterval(this.run.bind(this, 'next'), 3000)
   }
 
   handleEvent () {
