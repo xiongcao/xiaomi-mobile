@@ -18,7 +18,7 @@ class Detail extends App {
 
   async render () {
     const data = await this.getPhoneData(this.phoneId)
-    // new Header(this.$app, this.cache.fieldDatas, this.cache.phoneDatas).init();
+    new Header(this.$app, this.cache.fieldDatas, this.cache.phoneDatas).init();
     new DetailBoard(this.$app, data).init()
     new Footer(this.$app)
     $('body').prepend(this.$app);
